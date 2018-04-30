@@ -69,8 +69,65 @@ func main() {
 ```
 
 
+#### Primitives and variables
+
+There are, as in most programming languages some primitive types.
+`bool` a true or false value, `string` a piece of text, `int` a integer number, `float` a decimal number, `byte` a int with 8bits, `run` a character. There are others but lets stay with this for now.  These are used to construct everything else. An important thing about primitives is that they always have a value, even if you dont assign one to them.
 
 
+A variable is can be views as simply naming a value with an alias. That value of the alias can be used in conjunction with others. The slightly trick part with go is that there are two ways to declare a variable. 
+
+```go
+// this declares a variable, myVariable1, of type string and assigns it
+// the defaul value of an empty string
+var myVariable1 string
+
+// this declares a variable, myVariable2, of type string and assigns it
+// the value World
+myVariable2 := "World"
+
+// this reassigns a variable, myVariable1, and assigns it
+// to the value hello
+myVariable1 = "Hello"
+
+// this reassigns a variable, myVariable1, as the concatination result of
+// "Hello" + "World" == "HelloWorld"
+myVariable1 = myVariable1 + myVariable2
+```
+
+#### Control structure 
+
+`if` statements are used to control your flow of the program. If somthing is true, do something. 
+```go
+
+// this declares an int and assigns it its default value 0
+var a int
+
+if a == 0 {
+    fmt.Println("Its Zero")
+}
+
+```
+
+
+`for` is the keyword for a loop, this is used if you want to do something many times
+```go
+
+// this declares an int and assigns it its default value 0
+var sum int
+
+//     +- This delcares a in variable i as 0
+//     |      +- As long as this is true the loop will continue.
+//     |      |        +- When each loop is done, i is incremented by 1
+//     V      V        V
+for i := 0; i < 10; i += 1{
+    sum += i+1
+}
+
+// The prints sum of every number between 1 to 10
+fmt.Println(sum)
+
+```
 
 ## Lets do some coding
 
@@ -83,7 +140,52 @@ func main() {
 1. Open Visual Studio Code and select the folder `$GOPATH/src/github.com/<YOUR GITHUB NAME>/go-hack-02-01-fundamentals`
    to work from 
 
-I now assume you have visual studio code open aswell as the project within it. 
+I now assume you have visual studio code open as well as the project within it. 
 
 1. Let us not begin by creating a folder `students/<YOUR GITHUB NAME>`
 1. Now create an empty file within the folder called `main.go`
+
+### Fizz Buzz 
+The assignment is to write a program simulates the game FizzBuzz. It should print every number between 1 and 100. But 
+
+* If the number is evenly divisible by 3, replace the number by the word Fizz.
+* If the number is divisible by 5, replace the number by the word Buzz. 
+* If the number is divisible by 3 and 5, replace the number by the word FizzBuzz
+
+Expected output
+
+```bash
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+.
+.
+.
+```
+
+A good thing to know here integer operators. 
+* `+` adds two numbers, `5 + 2 = 7` 
+* `-` subtract one number form another, `5 - 2 = 3` 
+* `*` multiplies a number by another, `5 * 2 = 10`
+* `/` divides a number by another without remainder, `5 / 2 = 2`
+* `%` calculates the remainder in a division, `5 / 2 = 1`
+
+Some notes here on integer operations. In an integer operation 
+`(5 / 2) * 2 + (5 % 2) = 5`. Meaning, by dividing by 2 and multiplying the result by 2 dose not yield what we started with, five in this case, since we loose information in the precision of integers.
