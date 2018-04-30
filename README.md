@@ -185,7 +185,7 @@ A good thing to know here integer operators.
 * `-` subtract one number form another, `5 - 2 = 3` 
 * `*` multiplies a number by another, `5 * 2 = 10`
 * `/` divides a number by another without remainder, `5 / 2 = 2`
-* `%` calculates the remainder in a division, `5 / 2 = 1`
+* `%` calculates the remainder in a division, `5 % 2 = 1`
 
 Some notes here on integer operations. In an integer operation 
 `(5 / 2) * 2 + (5 % 2) = 5`. Meaning, by dividing by 2 and multiplying the result by 2 dose not yield what we started with, five in this case, since we loose information in the precision of integers.
