@@ -6,10 +6,10 @@ environment, mainly Visual Studio Code
 
 ## Visual Studio Code
 This editor is by default a relative small editor that are made by Microsoft using Github Electron framework. It is liked by many for 
-development in Go, which is the language we will be using. VS Code will help us in writing code, highlight errors, auto compleat things and so on. While you can write code in any text editor, a good on can be of great help, especially in the beginning.
+development in Go, which is the language we will be using. VS Code will help us in writing code, highlight errors, auto complete things and so on. While you can write code in any text editor, a good on can be of great help, especially in the beginning.
 
 ### Extensions
-VS Code comes quite bare, but can be augmented with extensions customizing your experience. For programming in go i recommend that you install the `Go` extensions by `lukehoban`.
+VS Code comes quite bare, but can be augmented with extensions customizing your experience. For programming in go I recommend that you install the `Go` extensions by `lukehoban`.
 
 So lets install some extensions.. Install extensions by pressing `Ctrl+Shift+X` and search for `Go`, once find just click install, and your done.
 
@@ -97,7 +97,7 @@ myVariable1 = myVariable1 + myVariable2
 
 #### Control structure 
 
-`if` statements are used to control your flow of the program. If somthing is true, do something. 
+`if` statements are used to control your flow of the program. If something is true, do something. 
 ```go
 
 // this declares an int and assigns it its default value 0
@@ -133,6 +133,7 @@ fmt.Println(sum)
 
 ### Cloning and starting work
 
+1. Fork this project on GitHub.
 1. Find your go path, a dir named `go` usually located in your home directory. 
 1. Navigate and make the following folder structure `$GOPATH/src/github.com/<YOUR GITHUB NAME>`
 1. Now run `git clone https://github.com/<YOUR GITHUB NAME>/go-hack-02-01-fundamentals.git`, this will fetch this 
